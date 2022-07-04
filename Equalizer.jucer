@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="DQmsql" name="Equalizer" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
+  <MAINGROUP id="yG0Py9" name="Equalizer">
+    <GROUP id="{5C623115-81EF-322F-FA2E-02377D131126}" name="Source">
+      <FILE id="dWAY0S" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="R3IGEm" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="zFw6mr" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="ThBNlE" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <VS2022 targetFolder="Builds/VisualStudio2022">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="Equalizer"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="Equalizer"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../Desktop/JUCE/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../Desktop/JUCE/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../Desktop/JUCE/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../../Desktop/JUCE/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../Desktop/JUCE/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../Desktop/JUCE/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../Desktop/JUCE/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../Desktop/JUCE/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../Desktop/JUCE/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../Desktop/JUCE/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../Desktop/JUCE/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../Desktop/JUCE/JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2022>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+</JUCERPROJECT>
