@@ -14,17 +14,18 @@
 //==============================================================================
 /**
 */
-class EqualizerAudioProcessorEditor  : public juce::AudioProcessorEditor
+class EqualizerAudioProcessorEditor : public juce::AudioProcessorEditor
 {
 public:
-    EqualizerAudioProcessorEditor (EqualizerAudioProcessor&);
+    EqualizerAudioProcessorEditor(EqualizerAudioProcessor&);
     ~EqualizerAudioProcessorEditor() override;
 
     //==============================================================================
-    void paint (juce::Graphics&) override;
+    void paint(juce::Graphics&) override;
     void resized() override;
 
 private:
+    
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     EqualizerAudioProcessor& audioProcessor;
