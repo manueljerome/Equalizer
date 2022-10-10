@@ -184,19 +184,19 @@ void EqualizerAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, ju
     auto chainSettings = getChainSettings(apvts);
     updatePeakFilter(chainSettings);
      
-    auto cutCoefficient = juce::dsp::FilterDesign<float>::designIIRHighpassHighOrderButterworthMethod(
+    auto lowcutCoefficient = juce::dsp::FilterDesign<float>::designIIRHighpassHighOrderButterworthMethod(
         chainSettings.lowCutFreq,
         getSampleRate(),
         2 * chainSettings.lowCutSlope + 1 );
 
     auto& leftLowCut = leftChain.get<chainPosition::LowCut>();
 
-    updateCutFilter(leftLowCut, cutCoefficient, chainSettings.lowCutSlope);
+    updateCutFilter(leftLowCut, lowcutCoefficient, chainSettings.lowCutSlope);
 
     auto& rightLowCut = rightChain.get<chainPosition::LowCut>();
-    updateCutFilter(rightLowCut, cutCoefficient, chainSettings.lowCutSlope);
+    updateCutFilter(rightLowCut, lowcutCoefficient, chainSettings.lowCutSlope);
     
-    auto highCutCoefficient = juce::dsp::FilterDesign<float>::designIIRHighpassHighOrderButterworthMethod(
+    auto highCutCoefficient = juce::dsp::FilterDesign<float>::designIIRLowpassHighOrderButterworthMethod(
         chainSettings.highCutFreq,
         getSampleRate(),
         2 * chainSettings.highCutSlope + 1);
